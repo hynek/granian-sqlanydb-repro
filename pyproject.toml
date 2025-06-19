@@ -1,0 +1,13 @@
+[project]
+name = "repro"
+version = "0.1.0"
+requires-python = "==3.12.*"
+dependencies = [
+    "flask>=3.1.1",
+    "granian>=2.3.4",
+    "sqlanydb>=1.0.14",
+]
+
+[build-system]
+requires = ["uv-build"]
+build-backend = "uv_build"
