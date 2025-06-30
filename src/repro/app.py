@@ -1,5 +1,6 @@
 import atexit
 import contextlib
+import sys
 
 import flask
 import sqlanydb
@@ -19,6 +20,7 @@ def break_it():
     return "graceful shutdown is broken now"
 
 def say_bye():
-    print("atexit called")
+    print("atexit called", file=sys.stderr)
+    sys.stderr.flush()
 
 atexit.register(say_bye)
